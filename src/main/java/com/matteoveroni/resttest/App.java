@@ -9,7 +9,7 @@ public class App {
     }
 
     private void start() {
-        final UUID serverId = UUID.randomUUID();
+        UUID serverId = UUID.randomUUID();
         Javalin app = Javalin.create().start(7000);
         app.get("/", ctx -> ctx.result("Hello World from server " + serverId));
     }
