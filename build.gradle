@@ -1,11 +1,11 @@
 plugins {
     id 'java'
-    id 'application'
+//    id 'application'
     id 'com.github.johnrengelman.shadow' version '6.1.0'
 }
 
 group 'com.matteoveroni.resttest'
-mainClassName = "com.matteoveroni.resttest.App"
+//mainClassName = "com.matteoveroni.resttest.App"
 version '1.0-SNAPSHOT'
 
 repositories {
@@ -24,7 +24,7 @@ jar {
             'Implementation-Title': 'RestTest App',
             'Specification-Version': project.version.replace('-SNAPSHOT', ''),
             'Implementation-Version': project.version,
-            'Main-Class': mainClassName
+            'Main-Class': 'com.matteoveroni.resttest.App'
     )
 }
 
@@ -33,4 +33,3 @@ shadowJar {
     archiveClassifier.set('')
     archiveVersion.set(project.version)
 }
-
