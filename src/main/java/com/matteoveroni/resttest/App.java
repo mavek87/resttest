@@ -10,7 +10,7 @@ public class App {
     public static void main(String[] args) {
         new App().start();
     }
-3
+
     private void start() {
         UUID serverId = UUID.randomUUID();
         Javalin app = Javalin.create().start(7000);
