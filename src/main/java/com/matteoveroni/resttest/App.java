@@ -3,6 +3,9 @@ package com.matteoveroni.resttest;
 import io.javalin.Javalin;
 import java.util.UUID;
 
+/**
+ * Simple REST webapp
+ */
 public class App {
     public static void main(String[] args) {
         new App().start();
