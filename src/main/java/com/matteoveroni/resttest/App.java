@@ -1,14 +1,15 @@
 package com.matteoveroni.resttest;
 
 import io.javalin.Javalin;
+import java.util.UUID;
 
 public class App {
     public static void main(String[] args) {
-        new App().start(args);
+        new App().start();
     }
 
-    private void start(String... args) {
+    private void start() {
         Javalin app = Javalin.create().start(7000);
-        app.get("/", ctx -> ctx.result("Hello World from server " + args[0]));
+        app.get("/", ctx -> ctx.result("Hello World from server " + UUID.randomUUID()));
     }
 }
