@@ -1,23 +1,24 @@
-//plugins {
-//    id 'java'
-//    id 'application'
-//    id 'com.github.johnrengelman.shadow' version '6.1.0'
-//}
-
-buildscript {
-    repositories {
-        maven {
-            url "https://plugins.gradle.org/m2/"
-        }
-    }
-    dependencies {
-        classpath "com.github.jengelman.gradle.plugins:shadow:6.1.0"
-    }
+plugins {
+    id 'java'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '6.1.0'
+    id 'org.barfuin.gradle.taskinfo' version '1.0.1'
 }
 
-apply plugin: "java"
-apply plugin: "application"
-apply plugin: "com.github.johnrengelman.shadow"
+//buildscript {
+//    repositories {
+//        maven {
+//            url "https://plugins.gradle.org/m2/"
+//        }
+//    }
+//    dependencies {
+//        classpath "com.github.jengelman.gradle.plugins:shadow:6.1.0"
+//    }
+//}
+//
+//apply plugin: "java"
+//apply plugin: "application"
+//apply plugin: "com.github.johnrengelman.shadow"
 
 group 'com.matteoveroni.resttest'
 mainClassName = "com.matteoveroni.resttest.App"
