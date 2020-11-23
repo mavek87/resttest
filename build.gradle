@@ -3,11 +3,11 @@ plugins {
     id 'application'
     id 'com.github.johnrengelman.shadow' version '6.1.0'
     id 'pl.allegro.tech.build.axion-release' version '1.12.1'
+    id 'com.palantir.docker' version '0.25.0'
 }
 
 group 'com.matteoveroni.resttest'
 mainClassName = "com.matteoveroni.resttest.App"
-
 scmVersion.repository.customUsername = project.property("GITHUB_TOKEN")
 project.version = scmVersion.version
 
@@ -35,4 +35,10 @@ jar {
 shadowJar {
     archiveClassifier.set('')
     archiveVersion.set(project.version)
+}
+
+docker {
+    name "${project.name}:${project.version}"
+    files "$buildDir/libs/${project.name}-${project.version}.jar"
+    buildArgs([JAR_FILE: "${project.name}-${project.version}.jar"])
 }
