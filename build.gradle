@@ -8,7 +8,7 @@ plugins {
 group 'com.matteoveroni.resttest'
 mainClassName = "com.matteoveroni.resttest.App"
 
-scmVersion.repository.customUsername = project.findProperty("GITHUB_TOKEN") ?: null
+scmVersion.repository.customUsername = project.property("GITHUB_TOKEN")
 project.version = scmVersion.version
 
 repositories {
