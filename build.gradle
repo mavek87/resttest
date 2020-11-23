@@ -2,11 +2,12 @@ plugins {
     id 'java'
     id 'application'
     id 'com.github.johnrengelman.shadow' version '6.1.0'
+    id 'pl.allegro.tech.build.axion-release' version '1.12.1'
 }
 
 group 'com.matteoveroni.resttest'
 mainClassName = "com.matteoveroni.resttest.App"
-version '1.0-SNAPSHOT'
+project.version = scmVersion.version
 
 repositories {
     jcenter()
