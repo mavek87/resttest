@@ -42,3 +42,5 @@ docker {
     files "$buildDir/libs/${project.name}-${project.version}.jar"
     buildArgs([JAR_FILE: "${project.name}-${project.version}.jar"])
 }
+
+dockerPrepare.dependsOn build

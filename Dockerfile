@@ -1,4 +1,5 @@
-FROM openjdk:8u275-buster
+FROM openjdk:8-slim
+EXPOSE 7000
 ARG JAR_FILE
 COPY ${JAR_FILE} app.jar
-ENTRYPOINT {"java", "-jar", "app.jar"}
+CMD["java", "-jar", "app.jar"]
